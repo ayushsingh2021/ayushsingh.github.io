@@ -1,0 +1,389 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<div class="container-fluid ">
+<!-- slider start -->
+<div class="row">
+    <div class="col-sm-12 p-0">
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'images/d.png' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- slider end -->
+   
+<!-- photo start -->
+<div class="row p-0">
+    <img src="{% static 'images/shape2.png' %}" alt="" style="margin-top: -120px;z-index: 5; width: 100%;" class="p-0">
+  </div>
+  <div class="container">
+    <div class="row ps-5">
+      <div class="col-sm-6 text-light" style="height: 280px; background: rgba(13,105,196,0.689); margin-top: -450px;z-index: 5;">
+        <h1 class="mt-3 ms-3" style="font-size: 50px;">Function Biotech Park In <br>North India</h1>
+        <p class="ms-3 mt-3">Bio Tech Park is India's top top research center, leading in biotechnology and scientific advancements
+  
+          Explore Now</p>
+        <button class="btn ms-3 mt-3" style="background-color: rgb(8,169,8);">Explore Now</button>
+      </div>
+    </div>
+  </div>
+  <!-- photo end -->
+<div class="row">
+    <div class="col-sm-12">
+        <!-- annouuncement -->
+        <div class="row p-5 mx-auto">
+            <div class="col-md-2 bg-success   text-light">
+                <h4>Announcement</h4>
+            </div>
+            <div class="col-sm-9 bg-primary">
+                <marquee direction="left" onmouseover="stop()" onmouseout="start()">
+                    <span class="text-dark "> <img src="../static/images/new.gif" alt="" height="40"><b>Join our webinar
+                            on Bioinformatics, "Unlocking the Power of Bioinformatics," on September 14th, 2024, at
+                            11:00 AM! Register here</b> </span>
+                    <span class="text-dark"> <img src="../static/images/new.gif" alt="" height="40"><b>A session on
+                            "Advancements in Medicinal Plant Biotechnology Research" will be held on September 21st,
+                            2024, from 11:00 AM to 12:30 PM (IST). Register here</b></span>
+                </marquee>
+            </div>
+        </div>
+
+        <!--  annouuncement end-->
+        <!-- faculties start -->
+        <!-- news & update start -->
+        <div class="row mt-2">
+            <div class="col-md-11 mx-auto">
+                <div class="row">
+                    <div class="col-md-7 border-start border-5 border-primary">
+                        <h2>We Cover The Whole Spectrum</h2>
+                    </div>
+                </div>
+                <div class="row py-3">
+                    <div class="col-md-3">
+                        <div class="card h-100 shadow border-0">
+                            <img src="../static/images/infra.jpg" height="200bh" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h4 class="text-center text-info py-4"> Modern Infrastructure</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm 3">
+                        <div class="card h-100 shadow border-0">
+                            <img src="../static/images/hitech.jpeg" height="200bh" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h4 class="text-center text-info py-4"> Hi-Tech Laboratories </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm 3">
+                        <div class="card h-100 shadow border-0">
+                            <img src="../static/images/skill.jpeg" height="200bh" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h4 class="text-center text-info py-4"> Skill Development </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm 3">
+                        <div class="card h-100 shadow border-0">
+                            <img src="../static/images/infra.jpg" height="200bh" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h4 class="text-center text-info py-4"> Clean Environment </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- faculties end -->
+        <!-- this is About Us-->
+        <div class="row bg-primary mt-5" style="background: linear-gradient(to right, rgb(74,74,214), rgb(4, 116, 49));">
+            <div class="container">
+                <div class="row  p-5 ppp">
+                    <div class="col-lg-6 w100 text-dark">
+                        <h3 class="text-light">About Biotech Park</h3>
+                        <hr>
+                        <p style="text-align: justify; color:white; font-family: sans-serif;">
+                            Welcome to Bio Tech Lucknow, India’s premier research center dedicated to pioneering
+                            advancements in biotechnology. As the nation’s number one research hub, we are at the
+                            forefront of innovative scientific research, driving breakthroughs that shape the future of
+                            healthcare, agriculture, and environmental sustainability.
+
+                            Our state-of-the-art facilities and world-class laboratories are staffed by a team of
+                            distinguished scientists and researchers committed to excellence. At Bio Tech Lucknow, we
+                            focus on cutting-edge research in genomics, bioinformatics, and molecular biology, striving
+                            to translate scientific discoveries into practical solutions that benefit society.
+
+                            We pride ourselves on fostering a collaborative environment that encourages creativity and
+                            innovation. Our partnerships with leading academic institutions, industry leaders, and
+                            government agencies enable us to stay ahead in the rapidly evolving field of biotechnology.
+
+                            Join us in our mission to push the boundaries of science and improve the quality of life
+                            through groundbreaking research and sustainable technological advancements. Bio Tech Lucknow
+                            is not just a research center; it is a beacon of progress and a catalyst for change in the
+                            biotech landscape of India.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 p-2 mt-4 w100">
+                        <iframe width="90%" class="rop" height="400"
+                            src="https://www.youtube.com/embed/n4XnjmavROw?si=xyklZkVLgmroA0bU"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- this is About Us end -->
+
+          <!-- our mentors start -->
+<div class="row mt-5">
+    <div class="col-md-10 mx-auto">
+    <div class="row">
+      <div class="col-md-6 border-start border-5 border-primary">
+        <h1> Our Mentors</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card h-100 shadow rounded-0" >
+          <img src="../static/images/Govermer.jpg" height="150bh"  class="card-img-top rounded-circle p-2 h-100" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center fw-bold" style="color:rgb(46, 150, 247);">Smt. Anandiben Patel</h5>
+              <p class="card-text text-center fw-bold">Hon’ble Governor <br />Uttar Pradesh</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm 3">
+        <div class="card h-100 shadow rounded-0" >
+          <img src="../static/images/yogiji.jpg" height="200bh"  class="card-img-top rounded-circle p-2 h-100" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center fw-bold" style="color:rgb(46, 150, 247);"> Shri Yogi Adityanath</h5>
+            <p class="card-text text-center fw-bold">Hon’ble Chief Minister<br />Uttar Pradesh</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm 3">
+        <div class="card h-100 shadow rounded-0" >
+          <img src="../static/images/Minister2.jpg" height="200bh" class="card-img-top rounded-circle p-2 h-100" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center fw-bold" style="color:rgb(46, 150, 247);"> Shri Anil Kumar</h5>
+            <p class="card-text text-center fw-bold">Hon’ble Cabinet Minister<br />DST, GoUP</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm 3">
+        <div class="card h-100 shadow rounded-0" >
+          <img src="../static/images/Prof JP Pandey.jpg" height="200bh" class="card-img-top rounded-circle p-2 h-100" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center fw-bold" style="color:rgb(46, 150, 247);"> Prof. J. P. Pandey</h5>
+            <p class="card-text text-center fw-bold">CEO <br />Biotech Park, Lucknow</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <!-- our mentors end -->
+   
+<!-- Agriculture start -->
+ <div class="row pb-3 mt-3">
+    <div class="col-sm-10 mx-auto">
+      <div class="row">
+        <div class="col-sm-6">
+          <h1>Agriculture Services industry</h1><br>
+          <hr>
+          <h4>1. Agriculture & Health</h4>
+          <hr>
+          <h4>2. Chemical & Metrical</h4>
+          <hr>
+          <h4>3. Soil Analysis</h4>
+          <hr>
+          <h4>4. Soil Tillage</h4>
+          <hr>
+        </div>
+        <div class="col-sm-6">
+          <img src="{% static 'images/soil.jpg' %}" alt="" height="300px" width="600px" style="margin-top: 70px; margin-left: 40px;">
+        </div>
+      </div>
+    </div>
+   </div>
+  <!-- Agriculture end -->
+
+
+
+<!-- Award winning start -->
+<div class="row  mt-4" style="height: 400px; background-image: linear-gradient(to right,rgb(4, 89, 209),rgb(18, 121, 5));"">
+    <div class="col-sm-10 mx-auto ">
+      <h1 class="text-center mt-5 text-light">Biotech Award Winning Research Project</h1>
+      <div class="row mt-5">
+        <div class="col-sm-3">
+          <div class="card">
+            <img src="{% static 'images/award1.png' %}" alt="" height="200vh">
+          </div>
+        </div>
+        <div class="col-sm-3">
+          
+            
+              <div class="card">
+                <img src="{% static 'images/award2.png' %}" alt="" height="200vh">
+              </div>
+           
+            </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <img src="{% static 'images/award3.png' %}" alt="" height="200vh">
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <img src="{% static 'images/award4.png' %}" alt="" height="200vh">
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+  <!-- Award winning end -->
+  
+  <!-- news & updates start -->
+   <div class="row">
+    <div class="col-sm-10 mx-auto mt-5">
+      <h2><u class="text-primary"><span class="text-dark">Latest News</span></u> And Updates</h2>
+    
+    <div class="row mt-5">
+      <div class="col-sm-3 mb-3">
+        <div class="card shadow" style="width: 18rem;">
+          <img src="{% static 'images/new1.png' %}" class="card-img-top" alt="..." height="200px">
+          <div class="card-body">
+            <p class="card-text">"On March 13, 2023, a lease was signed for Vatican Shona Agrotech to set up a tissue culture lab at Biotech Park, Lucknow."</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 mb-3">
+        <div class="card shadow" style="width: 18rem;">
+          <img src="{% static 'images/new2.png' %}" class="card-img-top" alt="..." height="200px">
+          <div class="card-body">
+            <p class="card-text">"On February 24, 2023, Awanish Kumar Awasthi visited Biotech Park, Lucknow, and interacted with the incubatees there."</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 mb-3">
+        <div class="card shadow" style="width: 18rem;">
+          <img src="{% static 'images/new3.png' %}" class="card-img-top" alt="..." height="200px">
+          <div class="card-body">
+            <p class="card-text">"On February 16, 2023, Gene to Protein launched 'GreenRTM dye' and qPCR Mastermix at Biotech Park, inaugurated by Alok Kumar."</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 mb-3">
+        <div class="card shadow" style="width: 18rem;">
+          <img src="{% static 'images/new4.png' %}" class="card-img-top" alt="..." height="200px">
+          <div class="card-body">
+            <p class="card-text">"A two-day workshop on "Production & Cultivation of Cordyceps militaris" was organized from April 22 to 24, 2022."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   </div>
+  
+   
+   <div class="row mt-4">
+    <div class="col-sm-12 mb-5 text-center">
+        <button style="height: 45px; width: 100px; background-image: linear-gradient(to right,rgb(4, 89, 209),rgb(18, 121, 5)); color:white; border:0px;">Read More</button>
+    </div>
+  </div>
+  <!-- news & updates end -->
+  
+  <!-- Training programmers start -->
+   <div class="row" style="height: 550px; background-image: linear-gradient(to right,rgb(4, 89, 209),rgb(18, 121, 5));">
+    <div class="col-sm-10 mx-auto mt-5">
+      <h2 class="text-light"><span class="border-bottom" style=" padding-bottom: 10px;">Training </span>Programme For Student</h2>
+      <div class="row mx-auto mt-5">
+        <div class="col-sm-3">
+          <div class="card">
+            <img src="{% static 'images/tra1.png' %}" alt="" height="230vh" class="p-2">
+            <h4 class="text-center">Bioinformatics</h4>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <img src="{% static 'images/tra2.png' %}" alt="" height="230vh" class="p-2">
+            <h4 class="text-center">Industrial Training</h4>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <img src="{% static 'images/tra3.png' %}" alt="" height="230vh" class="p-2">
+            <h4 class="text-center">Plant Tissue Culture</h4>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <img src="{% static 'images/tra4.png' %}" alt="" height="230vh" class="p-2">
+            <h4 class="text-center">Microbiology</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  
+   <div class="row mt-5"></div>
+    <div class="col-sm-12 mb-5 text-center">
+        <button style="height: 45px; width: 100px;  color:black; border:0px;">Read More</button>
+    </div>
+  </div>
+  </div>
+  <!-- Training programmers end -->
+  
+  <!-- our client start -->
+   <div class="row mt-5">
+    <div class="col-sm-10 mx-auto">
+      <h1><u class="text-primary"><span class="text-dark">Our</span></u> Clients</h1>
+      <div class="row mt-5">
+        <div class="col-sm-3">
+          <div class="card" style="width: 230px;">
+            <img src="{% static 'images/cp1.png' %}" alt="" height="240px">
+          </div>
+        </div>
+        <div class="col-sm-3" >
+          <div class="card" style="width: 230px;">
+            <img src="{% static 'images/cp2.png' %}" alt="" height="240px">
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="width: 230px;">
+            <img src="{% static 'images/cp3.png' %}" alt="" height="240px">
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="width: 230px;">
+            <img src="{% static 'images/cp5.jpg' %}" alt="" height="240px">
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+  <!-- our client end -->
+</div>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'adminlayout.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% block admin %}
+
+   <div class="row">
+    <div class="col-sm-11 mx-auto">
+        
+        <h1 class=" text-center mt-3"> show Courses</h1>
+        <table class="table my-4">
+            <tbead>
+                <tr class="table-dark">
+                    <th>SR.no</th>
+                    <th>session</th>
+                    <th>Course name</th>
+                    <th>Course Duration</th>
+                    <th>Course fees</th>
+                    <th>Created date</th>
+                    <th>Action</th>
+                </tr>
+                {% for i in Show %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.session}}</td>
+            <td>{{i.course_name}}</td>
+            <td>{{i.course_duration}}</td>
+            <td>{{i.course_fees}}</td>
+            <td>{{i.created_date}}</td>
+            <td><a href="{% url 'deletecou' i.id %}"><i class="fa-solid fa-trash" style="color: #ef0b17;"></i></a>
+            <a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+
+
+        </tr>
+            </tbead>
+            {% endfor %}
+        </table>
+    </div>
+   </div>
+
+
+
+
+
+    
+    {% endblock %}
+</body>
+</html>

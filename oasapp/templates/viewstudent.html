@@ -1,0 +1,34 @@
+{% extends 'adminlayout.html' %}
+{% load static %}
+
+{% block admin %}
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table">
+            <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email Address</th>
+                  <th>contact no</th>
+                  <th>Gender</th>
+                  <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in ab %}
+                <tr>
+                    <td>{{i.name}}</td>
+                    <td>{{i.emailaddress}}</td>
+                    <td>{{i.contactno}}</td>
+                    <td>{{i.gender}}</td>
+                    <td>
+                        <a href="#" class="btn btn-success">Delete</a>
+                    </td>
+                   {% endfor %}
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

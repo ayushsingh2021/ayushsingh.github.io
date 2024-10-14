@@ -1,0 +1,36 @@
+{% extends 'studentlayout.html' %}
+{% load static %}
+
+{% block student %}
+<div class="row">
+    <div class="col-md-10 mx-auto">
+        <h1 class="text-center text-primary">Fee payment</h1>
+        {% if vs %}
+       <div class="row mt-5">
+         <div class="col-md-4">
+            <img src="{{stu.pic.url}}" class="img-fluid" alt="">
+         </div>
+         <div class="col-md-8 ps-5">
+            <p class="fs-5">Name : <span class="fw-bold ps-3">{{stu.name}}</span></p>
+            <p class="fs-5">Session :<span class="fw-bold ps-3">{{stu.session}}</span></p>
+            <p class="fs-5">Course :<span class="fw-bold ps-3">{{stu.course}}</span></p>
+            <p class="fs-5">Course Duration :<span class="fw-bold ps-3">{{stu.course_duration}}</span></p>
+            <p class="fs-5">Fee Amount : <span class="fw-bold ps-3">&#8377 {{stu.fees}}</span></p>
+         </div>
+        </div>
+        <div class="row">
+            <h4 class="text-center text-primary mt-4">Scan this QR for fee payment</h4>
+            <div class="col-md-5 mx-auto">
+                <img src="../static/images/qr.jpeg" class="img-fluid"  alt="">
+            </div>
+        </div>
+        {% endif %}
+        {% if not vs %}
+        
+          <h4 class="text-center mt-5"> Your Document Verification is under processing..
+            <br>Wait for admin approval.
+          </h4>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

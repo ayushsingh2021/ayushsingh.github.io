@@ -1,0 +1,28 @@
+{% extends 'studentlayout.html' %}
+{% load static %}
+
+{% block student %}
+<h1 class="text-center"> Welcome Student</h1>
+{% if aa %}
+<h3 class="text-center mt-4" > Your Course is now Enrolled !!!!!!! </h3>
+<div class="row mt-4">
+    <div class="row mt-5">
+        <div class="col-md-4">
+           <img src="{{stu.pic.url}}" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-8 ps-5">
+           <p class="fs-5">Name : <span class="fw-bold ps-3">{{stu.name}}</span></p>
+           <p class="fs-5">Session :<span class="fw-bold ps-3">{{stu.session}}</span></p>
+           <p class="fs-5">Course :<span class="fw-bold ps-3">{{stu.course}}</span></p>
+           <p class="fs-5">Course :<span class="fw-bold ps-3">{{stu.course_duration}}</span></p>
+
+           <p class="fs-5">Fee Amount : <span class="fw-bold ps-3">&#8377 {{stu.fees}}</span></p>
+        </div>
+       </div>
+
+</div>
+{% endif %}
+{% if not aa %}
+<h4 class="text-center"> You Are not Enrolled is any course yet!.</h4>
+{% endif %}
+{% endblock %}

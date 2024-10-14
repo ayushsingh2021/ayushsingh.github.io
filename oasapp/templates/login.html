@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="row my-5 " style="background-color: linear-gradient(to right,rgb(74,74,214),rgb(176,58,58) green 80);">
+  <div class="col-md-4-mx-auto">
+    <div class="card p-3 w-50 mx-auto">
+
+      <main class="form-signin " >
+        <form method="post" action="{% url 'logcode' %}">
+          {% csrf_token %}
+          <div class="text-center ">
+            <span>
+            <i class="fa-regular fa-user fa-2x text-primary"></i>
+          </span>
+        </div>
+          <h1 class="h3 mb-3 fw-normal mx-auto">Walcome User</h1>
+          {% if msg %}
+          <div class="alert alert-danger" role="alert">{{msg}}</div>
+          {% endif %}
+          <div class="form-floating">
+           
+            <select class="form-select m-2" aria-label="Default select example" name="usertype" id="select" required>
+              <option selected >Select</option>
+              <option value="admin">Admin</option>
+              <option value="student">Student</option>
+              
+            </select>
+            <label for="select">Select user type</label>
+          </div>
+          <div class="form-floating m-2">
+            <input type="userid" class="form-control"  id="userid" placeholder="name@example.com" name="userid" required>
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating m-2">
+            <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
+            <label for="floatingPassword">Password</label>
+          </div>
+
+          <div class="form-check text-start my-3">
+            <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Remember me
+            </label>
+          </div>
+          <button class="btn btn-primary w-100 py-2" type="submit">Login</button>
+          <p class="mt-5 mb-3 text-body-secondary">&copy; </p>
+        </form>
+      </main>
+    
+    </div>
+
+  </div>
+
+
+</div>
+
+{% endblock %}

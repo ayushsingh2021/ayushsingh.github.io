@@ -1,0 +1,29 @@
+{% extends 'adminlayout.html' %}
+{% load static %}
+
+{% block admin %}
+ <div class="row">
+    <div class="col-sm-12">
+        <table class="table">
+       <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Session</th>
+        <th>Course</th>
+        <th>Address</th>
+        <th>Action</th>
+       </tr>
+       {% for s in students %}
+       <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.session}}</td>
+        <td>{{s.course}}</td>
+        <td>{{s.contactno}}</td>
+        <td>{{s.aadress}}</td>
+       </tr>
+       {% endfor %}
+        </table>
+    </div>
+ </div>
+{% endblock %}

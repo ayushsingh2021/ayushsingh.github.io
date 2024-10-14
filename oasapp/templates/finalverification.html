@@ -1,0 +1,37 @@
+{% extends 'adminlayout.html' %}
+{% load static %}
+{% block admin %}
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="text-center">  Final Verification</h1>
+        <table class="table mt-4">
+            <tr>
+                <th>S.no</th>
+                <th>Name</th>
+                <th>Session</th>
+                <th>course</th>
+                <th>Fees</th>
+                <th>Fee Receipt</th>
+                <th>Action</th>
+            </tr>
+            {% for s in students %}
+              <tr>
+                <td>{{forloop.counter }}</td>
+                <td>{{s.name}}</td>
+                <td>{{s.session}}</td>
+                <td>{{s.course}}</td>
+                <td>{{s.fees}}</td>                
+                <td>
+                    <a href="{{s.fees_ss.url}}" download="">
+                        <img src="{{s.fees_ss.url}}" alt="" width="150">
+                    </a>
+                </td>
+                <td>
+                    <a href="{% url 'assign' id=s.sid %}" class="btn btn-success">Assign Course</a>
+                </td>
+              </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

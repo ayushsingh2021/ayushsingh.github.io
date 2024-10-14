@@ -1,0 +1,53 @@
+{% extends 'adminlayout.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% block admin %}
+   
+    <div class="row bg-light shadow m-4 p-3">
+       
+        <table class=" table-dark text-dark text-center">
+            <h1 class="text-center"> shoe session</h1>
+
+            <thead class="text-center">
+                <tr>
+                    <th>ID</th>
+                    <th>session</th>
+                    <th>created_date</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in show %}
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.session}}</td>
+                    <td>{{i.created_date}}</td>
+                    <td>
+                        <a href="{% url 'editsession' i.id %}" class="btn btn-sm btn-secondary">Edit</a>
+                    </td>
+                    <td>
+                        <a href="{% url 'deletesession'  i.id %}" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+    </div>
+    
+    {% endblock %}
+</body>
+</html>

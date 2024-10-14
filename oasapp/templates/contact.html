@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="row">
+  
+</div>
+ <div class="row mt-5">
+  
+  <h1 class="text-center"> Contact Us </h1>
+  <div class="col-sm-10 mx-auto shadow">
+    <div class="row">
+      {% if msg %}
+      <div class="col-sm-12 ">
+        <div class="alert alert-success " role="alert">{{msg}}</div>
+      </div>
+      {% endif %}
+      <div class="col-sm-5 mt-3">
+        <img src="../static/images/contact-1.jpg" height="400px;" alt="">
+      </div>
+       <div class="col-sm-6">
+        <form class="row g-3" method="post">
+          {% csrf_token %}
+          <div class="row">
+          <div class="col-md-12">
+            <label for="name" class="form-label">Name:</label>
+            <input name="name" type="text" class="form-control" id="name">
+          </div>
+        </div>
+          <div class="col-md-12">
+            <label for="gender" class="form-label">Gender:</label>
+            <input  name="gender" type="radio"  value="male" class="form-check-input" id="gender">Male
+            <input  name="gender" type="radio" value="femail
+            " class="form-check-input" id="gender">Femail
+          </div>
+          <div class="col-md-12">
+            <label for="address" class="form-label"> Address:</label>
+            <input name="address" type="text" class="form-control" id="address">
+          </div>
+          <div class="col-md-12">
+            <label for="contactno" class="form-label">Contactno:</label>
+            <input name="contactno" type="text" class="form-control" id="contactno">
+          </div>
+          <div class="col-md-12">
+            <label for="emailaddress" class="form-label">Email:</label>
+            <input name="emailaddress" type="email" class="form-control" id="emailaddress">
+          </div>
+          <div class="col-md-12">
+            <label for="enquirytext" class="form-label">Enquiry Text:</label>
+            <textarea name="enquirytext" type="text" class="form-control" id="enquirytext"></textarea>
+          </div>
+          <div class="col-12 text-center py-4">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+        <!-- form end -->
+      </div>
+    </div>
+  </div>
+ </div>
+{% endblock %}

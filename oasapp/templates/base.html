@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <!-- google fonts -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <title>Onlion Admisson System</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <style>
+    .fb{
+position:fixed;
+width:60px;
+height:60px;
+bottom:130px;
+right:40px;
+background-color:#1ecb1e;
+color:#FFF;
+border-radius:50px;
+text-align:center;
+font-size:30px;
+box-shadow: 2px 2px 3px #999;
+z-index:100;
+}
+
+.float{
+position:fixed;
+width:60px;
+height:60px;
+bottom:60px;
+right:40px;
+background-color:#25d366;
+color:#FFF;
+border-radius:50px;
+text-align:center;
+font-size:30px;
+box-shadow: 2px 2px 3px #999;
+z-index:100;
+}
+
+.my-float{
+margin-top:16px;
+}
+  </style>
+</head>
+
+<body style="background-color: aliceblue; font-family:Ubuntu, sans-serif;">
+  <div class="container-fluid ">
+   <!-- header start -->
+   <div class="row bg-primary text-light p-2">
+    <div class="col-sm-8">
+      <span><i class="fa-regular fa-clock"></i> The Biotech Park Is Open From 9:00 am to 7:00 pm</span>
+
+    </div>
+    <div class="col-sm-4 text-end ">
+      <span><span style="font-size: 18px; background-color: white; color: green; padding: 5px; border-radius: 5px; "
+          class="ms-1"><i class="fa-brands fa-facebook"></i></span></span>
+      <span><span style="font-size: 18px; background-color: white; color: green; padding: 5px; border-radius: 5px;"><i
+            class="fa-brands fa-twitter"></i></span></span>
+      <span style="font-size: 18px; background-color: white; color: green; padding: 5px; border-radius: 5px;"><i
+          class="fa-brands fa-youtube"></i></span>
+    </div>
+  </div>
+  <!-- header end -->
+
+    <!-- navbar start -->
+    <div class="row sticky-top">
+      <nav class="navbar navbar-expand-lg" style="background: linear-gradient(to right, rgb(74,74,214), rgb(4, 116, 49));">
+        <div class="container-fluid p-3 text-light">
+          <img src="{% static 'images/logo.png' %}" alt="" height="90px" width="70px">
+
+          <p class="ms-3"><strong style="font-size: 25px;"> Biotech Park, Lucknow</strong><br> Where cutting edge
+            science prospers..</p>
+
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse ms-3" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+              <li class="nav-item ms-5">
+                <a class="nav-link active ms-3 text-light" aria-current="page"
+                  href="{% url 'index' %}"><b>Home </b> </a>
+              </li>
+              <div class="dropdown">
+                <a href="#" class="nav-link action text-light" data-bs-toggle="dropdown"><b>The Park </b></a>
+                 <ul class="dropdown-menu">
+                   <li><a class="dropdown-item" href="{% url 'about' %}">Organization</a></li>
+                   <li><a class="dropdown-item" href="{% url 'parkluck' %}">Why Biotech Park Lucknow ?</a></li>
+                   <li><a class="dropdown-item" href="{% url 'location' %}">Locations</a></li>
+                   <li><a class="dropdown-item" href="{% url 'Certification' %}">Certifications</a></li>
+                   <li><a class="dropdown-item" href="{% url 'collaborators'%}">Our Collaborators</a></li>
+                   <li><a class="dropdown-item" href="{% url 'index'%}">Knowledge Network</a></li>
+                   <li><a class="dropdown-item" href="{% url 'knowldge'%}">Outreach Activities</a></li>
+                   <hr>
+                   <li><a class="dropdown-item" href="#"><strong>The People</strong></a></li>
+                   <hr>
+                   <li><a class="dropdown-item" href="{% url 'ceo'%}">CEO</a></li>
+                   <li><a class="dropdown-item" href="{% url 'distinguished'%}">Distinguished Science And Members</a></li>
+                   <li><a class="dropdown-item" href="{% url 'scientific'%}">Scientific Staff</a></li>
+                   <li><a class="dropdown-item" href="#">Administration</a></li>
+                   <li><a class="dropdown-item" href="#">Technical Support</a></li>
+                 </ul>
+               </div>
+              <div class="dropdown">
+               <a href="#" class="nav-link action text-light" data-bs-toggle="dropdown"><strong>Facilities &nbsp;|</strong></a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">services</a></li>
+                  <li><a class="dropdown-item" href="#">Research Park & Labs</a></li>
+                  <li><a class="dropdown-item" href="#">Conference Hall</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <a href="#" class="nav-link action text-light" data-bs-toggle="dropdown"><strong>Skill Development</strong><span>&nbsp; 
+                 |</span></a>
+                 <ul class="dropdown-menu">
+                   <li><a class="dropdown-item" href="#">HRD Overview</a></li>
+                   <li><a class="dropdown-item" href="#">Training Program and Education Outreach</a></li>
+                   <hr>
+                   <li><a class="dropdown-item" href="#">Certificate Courses Approved By Baba Saheb Bhimrao Amdedkar University</a></li>
+                   <hr>
+                   <li><a class="dropdown-item" href="#">Up Skill Development Mission Sponsored Program</a></li>
+                   <li><a class="dropdown-item" href="#">Vocational Training</a></li>
+                 </ul>
+               </div>
+               <div class="dropdown">
+                <a href="#" class="nav-link action text-light" data-bs-toggle="dropdown"><strong>Business </strong><span>&nbsp; 
+                 |</span></a>
+                 <ul class="dropdown-menu">
+                   <li><a class="dropdown-item" href="#">Tenders</a></li>
+                   <li><a class="dropdown-item" href="#">Policy Document</a></li>
+                   <li><a class="dropdown-item" href="#">Resident Companies</a></li>
+                 </ul>
+               </div>
+              <li class="nav-item"></li>
+              <a class="nav-link active text-light" aria-current="page" href="{% url 'index' %}"><strong>Success
+                  Stories</strong> <span> &nbsp;|</span> </a>
+              </li>
+              <li class="nav-item"></li>
+              <a class="nav-link active text-light" aria-current="page" href="{% url 'index' %}"><strong>News &Events</strong> <span> &nbsp;|</span> </a>
+              </li>
+              <div class="dropdown">
+                <a href="#" class="nav-link action text-light" data-bs-toggle="dropdown"><strong>Contact Us </strong><span>&nbsp; 
+                 |</span></a>
+                 <ul class="dropdown-menu" style="border-radius:0px; margin-left:-300px;">
+                   <li><a class="dropdown-item" href="#">Training Program For Student From North-East India</a></li>
+                   <li><a class="dropdown-item" href="{% url 'contact' %}">contact</a></li>
+                   <li><a class="dropdown-item" href="#">about</a></li>
+                   <li><a class="dropdown-item" href="#">General</a></li>
+                 </ul>
+               </div>
+              <div>
+                <a href="{% url 'login' %}" class="btn btn-success loginbtn"> Login</a> 
+              </div>
+          </ul>
+              </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- navbar end -->
+
+ 
+ 
+    <!-- main start -->
+    <div class="row" style="min-height: 500px;">
+
+      {% block body %}
+
+      {% endblock %}
+    </div>
+    <!-- main end -->
+    <!-- this is footer -->
+  
+    <!-- footer start -->
+    <div class="container-fluid ">
+    <div class="row footer" style="height: 500px; background-image: linear-gradient(to right,rgb(4, 89, 209),rgb(18, 121, 5));">
+      <div class="col-sm-12 p-0">
+        <img src="{% static 'images/shape.png' %}" alt="" class="w-100">
+        <div class="row mx-auto">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4 ms-5 text-light">
+                <h5 style="font-weight: bolder; ">Bio Tech Park Lucknow</h5>
+                <p>Biotech Pack Sector G, Jankipuram, kursi Road, <br>Lucknow - 226021 Uttar Pradesh - INDIA</p>
+                <span><i class="fa-solid fa-phone"></i><span style="font-weight: bolder;"> Phone :</span><span> +91 522
+                    4012091, 2365050</span></span><br>
+                <span><i class="fa-solid fa-envelope"></i><span style="font-weight: bolder;"> Email :</span> <span>
+                    psceo@biotechpark.org.in</span></span><br>
+                <span><i class="fa-solid fa-envelope"></i><span style="font-weight: bolder;"> Email :</span> <span>
+                    services@biotechpark.org.in</span></span><br>
+                <span><i class="fa-solid fa-envelope"></i><span style="font-weight: bolder;"> Email :</span> <span>
+                    psceo@biotechpark.org.in</span></span><br>
+                <span><i class="fa-solid fa-envelope"></i><span style="font-weight: bolder;"> Email :</span> <span>
+                    trainingprograms@biotechpark.org.in</span></span><br>
+                <br>
+                <span><span
+                    
+                    class="ms-1"><a href="#" style="font-size: 22px; background-color: white; color: black; padding: 5px; border-radius: 5px; margin-top: 5px; "><i class="fa-brands fa-instagram"></i></a></span></span>
+                <span><span
+                   
+                    class="ms-1"><a href=""  style="font-size: 22px; background-color: white; color: black; padding: 5px; border-radius: 5px; "><i class="fa-brands fa-twitter "></i></a></span></span>
+                <span><span
+                   
+                    class="ms-1"><a href="#"  style="font-size: 22px; background-color: white; color: black; padding: 5px; border-radius: 5px; "><i class="fa-brands fa-facebook"></i></a></span></span>
+                <span><span
+                    
+                    class="ms-1"><a href="#" style="font-size: 22px; background-color: white; color: black; padding: 5px; border-radius: 5px; "><i class="fa-brands fa-linkedin"></i></a></span></span>
+                <span><span
+                    
+                    class="ms-1"><a href="#" style="font-size: 22px; background-color: white; color: black; padding: 5px; border-radius: 5px; "><i class="fa-brands fa-google"></i></a></span></span>
+
+              </div>
+              <div class="col-sm-2 text-light">
+                <h4 style="font-weight: bold;">Bio-Tech Info</h4><br>
+                <span><i class="fa-solid fa-arrow-up-right-from-square ms-3"></i><span style="font-size: 18px;">
+                    Policies</span></span><br>
+                <span><i class="fa-solid fa-arrow-up-right-from-square ms-3"></i><span style="font-size: 18px;"> Useful
+                    Links</span></span><br>
+                <span><i class="fa-solid fa-arrow-up-right-from-square ms-3"></i><span style="font-size: 18px;">
+                    Networks</span></span><br>
+                <span><i class="fa-solid fa-arrow-up-right-from-square ms-3"></i><span style="font-size: 18px;">
+                    Research Park</span></span><br>
+                <span><i class="fa-solid fa-arrow-up-right-from-square ms-3"></i><span style="font-size: 18px;"> Contact
+                    Us</span></span><br>
+              </div>
+              <div class="col-sm-2 text-light">
+                <h4 style="font-weight: bold;">Important Links</h4><br>
+                <span><i class="fa-solid fa-arrow-up-right-from-square ms-3"></i><span style="font-size: 18px;">
+                    Tenders</span></span><br>
+                <span><i class="fa-solid fa-arrow-up-right-from-square ms-3"></i><span style="font-size: 18px;">
+                    Downloads</span></span><br>
+                <span><i class="fa-solid fa-arrow-up-right-from-square ms-3"></i><span style="font-size: 18px;">
+                    E-Calender</span></span><br>
+                <span><i class="fa-solid fa-arrow-up-right-from-square ms-3"></i><span style="font-size: 18px;">
+                    Directory</span></span><br>
+                <span><i class="fa-solid fa-arrow-up-right-from-square ms-3"></i><span style="font-size: 18px;">
+                    WebMail</span></span><br>
+              </div>
+              <div class="col-sm-2 text-light ms-5">
+                <h4 style="font-weight: bold;">Certification</h4><br>
+                <img src="{% static 'images/c.png' %}" alt="" height="170px">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        <!-- this is footer end-->
+        <div class="row p-2 " style="border: 1px dashed black;">
+          <div class="col-sm-6 p-1 mx-auto">
+            <h6 class="mx-auto">Designe and Developed by Ayush Singh | &copy; All Right Reserved.</h6>
+          </div>
+        </div>
+<!--sticky icon-->
+<div class="container-fluid">
+  <div class="row m-0 p-0 ">
+    <div class="col-sm-6">
+     
+        
+        <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="fb" target="_blank">
+          <span class="" style=" font-size: 45px;  color: black; padding: 5px; border-radius: 5px; "><i class="fa-brands fa-whatsapp" style="color: #53d0c8;"></i></span>
+                      
+        </a>
+    </div>
+  </div>
+ </div>
+
+  <!---icon end-->
+
+
+      </div>
+    </div>
+
+
+
+
+    <!-- this is conatainer -->
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+  </div>
+</body>
+
+</html>

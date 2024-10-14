@@ -1,0 +1,42 @@
+    {% extends 'adminlayout.html' %}
+    {% load static %}
+ {% block admin %}
+  <div class="row px-5">
+     <h1 class="text-center my-5">Admin Dashbord</h1>
+    <div class="col-md-3 p-2">
+        <div class="card py-4 text-center">
+            <h1 class="text-success"><i class="fa-solid fa-user-graduate"></i> {{sc}}</h1>
+            <p>Student</p>
+        </div>
+    </div>
+    <div class="col-md-3 p-2">
+        <div class="card py-4 text-center">
+            <h1 class=""><i class="fa-solid fa-user-graduate"> </i> {{cc}}+</h1>
+            <p>Courses</p>
+        </div>
+    </div>
+    <div class="col-md-3 p-2">
+        <div class="card py-4 text-center">
+            <h1><i class="fa-solid fa-user-graduate"></i> {{ec}}+</h1>
+            <p>Enquiry</p>
+        </div>
+    </div>
+    <div class="col-md-3 p-2">
+        <div class="card py-4 text-center">
+            <h1><i class="fa-solid fa-user-graduate"></i>{{dp}}+</h1>
+            <p> Document Verification Pending</p>
+        </div>
+    </div>
+    <div class="col-md-3 p-2">
+        <div class="card py-4 text-center">
+            <h1 class="text-success"><i class="fa-solid fa-user-graduate"></i> {{fc}}</h1>
+            <p>FEE Verification Pending</p>
+        </div>
+    </div>
+    <div class="col-md-3 p-2">
+        <div class="card py-4 text-center">
+            <h1 class=""><i class="fa-solid fa-user-graduate"> </i>{{apc}}</h1>
+            <p>Approved Student</p>
+        </div>
+  </div>
+{% endblock %}

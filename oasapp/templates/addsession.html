@@ -1,0 +1,45 @@
+{% extends 'adminlayout.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>Onlion Admisson System</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <script src="../static/js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+    {% block admin %}
+    <h1 class="text-center mt-3">Add Session
+    </h1>
+    <div class="row bg-light shadow m-4 p-3">
+        <form action="{% url 'assave' %}" method="post">
+            {% csrf_token %}
+            <div class="col-sm-12">
+                <p>Add Your seaaion</p>
+                <input type="text" placeholder="ex.2023-2024" name="session"
+                    class="form-control border-dark rounded-0" />
+            </div>
+            <div class="col-sm-12">
+                <input type="submit" value="Add Session" class="btn btn-primary mt-4">
+            </div>
+        </form>
+       
+        </div>
+    </div>
+    
+    {% endblock %}
+</body>
+
+</html>

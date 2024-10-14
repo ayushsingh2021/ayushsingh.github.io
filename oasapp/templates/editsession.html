@@ -1,0 +1,28 @@
+{% extends 'adminlayout.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% block admin %}
+    <h1 class="text-center mt-4">Edit Session</h1>
+    <div class="row bg-light shadow m-4">
+        <form method="post">
+            {% csrf_token %}
+           <p>session</p>
+                <input type="text" value="{{show.session}}" name="session"
+                    class="form-control border-dark rounded-0" />
+            </div>
+           <input type="submit" value="Edit"/>
+           
+        </form>
+    </div>
+    {% endblock %}
+</body>
+
+</html>
